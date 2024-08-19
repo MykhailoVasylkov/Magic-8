@@ -1,0 +1,27 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=New+Amsterdam&display=swap');
+
+/*Main style*/
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Bebas Neue", "New Amsterdam", sans-serif;
+    text-align: center;
+}
+
+main {
+    background-image: linear-gradient(to right top, #1c1818, #381c1c, #541e1e, #701d1f, #8c1b1d, #9f162c, #b10d3d, #c30050, #c1167c, #ac38a7, #8256cc, #166ee6);
+    box-sizing: border-box;
+    width: 85%;
+    height: 85%;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
