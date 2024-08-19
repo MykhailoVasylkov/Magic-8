@@ -48,6 +48,8 @@ header a:hover {
     text-shadow: 5px 5px 3px #1c1c1f;
 }
 
+/*Game area*/
+
 main {
     background-image: linear-gradient(to right top, #1c1818, #381c1c, #541e1e, #701d1f, #8c1b1d, #9f162c, #b10d3d, #c30050, #c1167c, #ac38a7, #8256cc, #166ee6);
     box-sizing: border-box;
@@ -81,6 +83,7 @@ figure img:hover {
     transform: scale(1.15);
 }
 
+/*Footer*/ 
 footer {
     font-size: 3vw;
     text-shadow: 3px 3px 3px #9d9da0;
