@@ -10,8 +10,19 @@ body {
 }
 
 /*Header*/
+
 header {
-    position: absolute;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 100px;
 }
 
 header a {
@@ -29,23 +40,22 @@ header a:hover {
 #logo {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
 }
 
 #logo-image {
     width: auto;
-    height: 100%;
-    max-height: 16vw;
-    margin-right: 1vw;
+    height: 20vw;
+    max-height: 100px;
 }
 
 #logo-text {
     font-weight: bold;
     color: #5885ff;
-    font-size: 6vw;
     white-space: nowrap;
     text-shadow: 5px 5px 3px #1c1c1f;
+    font-size: 11vw;
 }
 
 /*Game area*/
@@ -54,14 +64,13 @@ main {
     background-image: linear-gradient(to right top, #1c1818, #381c1c, #541e1e, #701d1f, #8c1b1d, #9f162c, #b10d3d, #c30050, #c1167c, #ac38a7, #8256cc, #166ee6);
     box-sizing: border-box;
     width: 80%;
-    height: 80%;
-    max-width: 550px;
-    max-height: 550px;
+    max-width: 500px;
+    max-height: 500px;
     border-radius: 20%;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    font-size: 4vw;
+    font-size: 150%;
     color: white;
     text-shadow: 5px 5px 3px #1c1c1f;
     box-shadow: 5px 5px 5px #646466;
@@ -83,8 +92,26 @@ figure img:hover {
     transform: scale(1.15);
 }
 
-/*Footer*/ 
+/*Footer*/
 footer {
-    font-size: 3vw;
     text-shadow: 3px 3px 3px #9d9da0;
+}
+
+/* Media queries */
+@media (min-width: 700px) {
+
+
+    #logo-text {
+        font-size: 4.5rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+
+    main {
+        width: 100%;
+    }
+
 }
