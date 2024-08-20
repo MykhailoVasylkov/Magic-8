@@ -82,6 +82,8 @@ img {
     max-width: 100%;
 }
 
+/*Hover effect for 8-ball images*/
+
 figure img {
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -90,6 +92,18 @@ figure img {
 
 figure img:hover {
     transform: scale(1.15);
+}
+
+/*Shake effect for 8-ball images*/
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    20%, 60% { transform: translate(-10px, 0); }
+    40%, 80% { transform: translate(10px, 0); }
+}
+
+img.shake {
+    animation: shake 0.5s;
 }
 
 /*Footer*/
