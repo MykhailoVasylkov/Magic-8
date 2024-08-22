@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.getElementById("images");
     const emailForm = document.getElementById("emailForm");
+    const triesArea = document.getElementById("tries-area");
     let numberOfTries = 3;
 
     //Create array with photos that represent random answers
@@ -44,16 +45,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+//Remove email form, tries area and increase number of tries after submitting the form
+    emailForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-
+        if (triesArea) {
+            triesArea.remove();
+            emailForm.remove();
+            numberOfTries = 1000;
+        }
+    });
 });
+
 
 //Decrease amount of tries by 1
 function decreaseTries() {
     let defaultTries = parseInt(document.getElementById("tries").innerText);
     document.getElementById("tries").innerText = --defaultTries;
 }
-
 // Show the email form
 function showEmailForm() {
     const emailForm = document.getElementById("emailForm");
