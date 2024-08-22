@@ -1,6 +1,8 @@
 //Finish loading the DOM before running the game
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.getElementById("images");
+    let numberOfTries = 3;
+
     //Create array with photos that represent random answers
     const answers = [
         "assets/images/answer-1.PNG",
@@ -20,16 +22,32 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     images.addEventListener("click", function () {
-        // Add class for animation
-        images.classList.add("shake");
+        if (numberOfTries > 0) {
+            numberOfTries--;
 
-        // Finish animation after 500ms
-        setTimeout(function () {
-            images.classList.remove("shake");
+            // Add class for animation
+            images.classList.add("shake");
 
-            // Randome answer
-            const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
-            images.src = randomAnswer;
-        }, 500);
+            // Finish animation after 500ms
+            setTimeout(function () {
+                images.classList.remove("shake");
+
+                // Randome answer
+                const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+                images.src = randomAnswer;
+            }, 500);
+            decreaseTries();
+        } else {
+            alert("You've used up all your tries! Give me your soul (or just your email) to get unlimited access.");
+        }
+
     });
+
+
 });
+
+//Decrease amount of tries by 1
+function decreaseTries() {
+    let defaultTries = parseInt(document.getElementById("tries").innerText);
+    document.getElementById("tries").innerText = --defaultTries;
+}
