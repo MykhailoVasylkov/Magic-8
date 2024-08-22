@@ -1,6 +1,7 @@
 //Finish loading the DOM before running the game
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.getElementById("images");
+    const emailForm = document.getElementById("emailForm");
     let numberOfTries = 3;
 
     //Create array with photos that represent random answers
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             decreaseTries();
         } else {
             alert("You've used up all your tries! Give me your soul (or just your email) to get unlimited access.");
+            showEmailForm();
         }
 
     });
@@ -50,4 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function decreaseTries() {
     let defaultTries = parseInt(document.getElementById("tries").innerText);
     document.getElementById("tries").innerText = --defaultTries;
+}
+
+// Show the email form
+function showEmailForm() {
+    const emailForm = document.getElementById("emailForm");
+    if (emailForm) {
+        emailForm.classList.remove("hidden");
+    }
 }
