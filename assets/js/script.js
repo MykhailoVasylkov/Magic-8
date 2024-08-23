@@ -1,4 +1,5 @@
 //Finish loading the DOM before running the game
+//Used https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.getElementById("images");
     const emailForm = document.getElementById("emailForm");
@@ -6,28 +7,71 @@ document.addEventListener("DOMContentLoaded", function () {
     let numberOfTries = 3;
 
     //Create array with photos that represent random answers
-    const answers = [
-        {src: "assets/images/answer-1.PNG", alt: "It is certain"},
-        {src: "assets/images/answer-2.PNG", alt: "Yes, definitely"},
-        {src: "assets/images/answer-3.PNG", alt: "Outlook good"},
-        {src: "assets/images/answer-4.PNG", alt: "Most likely"},
-        {src: "assets/images/answer-5.PNG", alt: "You may rely on it"},
-        {src: "assets/images/answer-6.PNG", alt: "My reply is no"},
-        {src: "assets/images/answer-7.PNG", alt: "Don't count on it"},
-        {src: "assets/images/answer-8.PNG", alt: "Outlook not so good"},
-        {src: "assets/images/answer-9.PNG", alt: "Very doubtful"},
-        {src: "assets/images/answer-10.PNG", alt: "Reply hazy, try again"},
-        {src: "assets/images/answer-11.PNG", alt: "Ask again later"},
-        {src: "assets/images/answer-12.PNG", alt: "Better not tell you now"},
-        {src: "assets/images/answer-13.PNG", alt: "Cannot predict now"},
-        {src: "assets/images/answer-14.PNG", alt: "Focus and ask again"},
+    const answers = [{
+            src: "assets/images/answer-1.PNG",
+            alt: "It is certain"
+        },
+        {
+            src: "assets/images/answer-2.PNG",
+            alt: "Yes, definitely"
+        },
+        {
+            src: "assets/images/answer-3.PNG",
+            alt: "Outlook good"
+        },
+        {
+            src: "assets/images/answer-4.PNG",
+            alt: "Most likely"
+        },
+        {
+            src: "assets/images/answer-5.PNG",
+            alt: "You may rely on it"
+        },
+        {
+            src: "assets/images/answer-6.PNG",
+            alt: "My reply is no"
+        },
+        {
+            src: "assets/images/answer-7.PNG",
+            alt: "Don't count on it"
+        },
+        {
+            src: "assets/images/answer-8.PNG",
+            alt: "Outlook not so good"
+        },
+        {
+            src: "assets/images/answer-9.PNG",
+            alt: "Very doubtful"
+        },
+        {
+            src: "assets/images/answer-10.PNG",
+            alt: "Reply hazy, try again"
+        },
+        {
+            src: "assets/images/answer-11.PNG",
+            alt: "Ask again later"
+        },
+        {
+            src: "assets/images/answer-12.PNG",
+            alt: "Better not tell you now"
+        },
+        {
+            src: "assets/images/answer-13.PNG",
+            alt: "Cannot predict now"
+        },
+        {
+            src: "assets/images/answer-14.PNG",
+            alt: "Focus and ask again"
+        },
     ];
-
+//Used https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+//Used Chat-GPT
     images.addEventListener("click", function () {
         if (numberOfTries > 0) {
             numberOfTries--;
 
             // Add class for animation
+            //Used Chat-GPT to figure out how to add shake affect
             images.classList.add("shake");
 
             // Finish animation after 500ms
@@ -46,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
-//Remove email form, tries area and increase number of tries after submitting the form
+    //Remove email form, tries area and increase number of tries after submitting the form
     emailForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -57,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
 
 //Decrease amount of tries by 1
 function decreaseTries() {

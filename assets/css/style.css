@@ -25,6 +25,9 @@ header {
     height: 100px;
 }
 
+/*Hover effect for logo*/
+/*Used code snippet from Project #1*/
+
 header a {
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -94,11 +97,24 @@ figure img:hover {
 }
 
 /*Shake effect for 8-ball images*/
+/*Used Chat-GPT to figure out how to add shake affect*/
 
 @keyframes shake {
-    0%, 100% { transform: translate(0, 0); }
-    20%, 60% { transform: translate(-10px, 0); }
-    40%, 80% { transform: translate(10px, 0); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    20%,
+    60% {
+        transform: translate(-10px, 0);
+    }
+
+    40%,
+    80% {
+        transform: translate(10px, 0);
+    }
 }
 
 img.shake {
