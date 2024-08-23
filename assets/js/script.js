@@ -7,20 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Create array with photos that represent random answers
     const answers = [
-        "assets/images/answer-1.PNG",
-        "assets/images/answer-2.PNG",
-        "assets/images/answer-3.PNG",
-        "assets/images/answer-4.PNG",
-        "assets/images/answer-5.PNG",
-        "assets/images/answer-6.PNG",
-        "assets/images/answer-7.PNG",
-        "assets/images/answer-8.PNG",
-        "assets/images/answer-9.PNG",
-        "assets/images/answer-10.PNG",
-        "assets/images/answer-11.PNG",
-        "assets/images/answer-12.PNG",
-        "assets/images/answer-13.PNG",
-        "assets/images/answer-14.PNG"
+        {src: "assets/images/answer-1.PNG", alt: "It is certain"},
+        {src: "assets/images/answer-2.PNG", alt: "Yes, definitely"},
+        {src: "assets/images/answer-3.PNG", alt: "Outlook good"},
+        {src: "assets/images/answer-4.PNG", alt: "Most likely"},
+        {src: "assets/images/answer-5.PNG", alt: "You may rely on it"},
+        {src: "assets/images/answer-6.PNG", alt: "My reply is no"},
+        {src: "assets/images/answer-7.PNG", alt: "Don't count on it"},
+        {src: "assets/images/answer-8.PNG", alt: "Outlook not so good"},
+        {src: "assets/images/answer-9.PNG", alt: "Very doubtful"},
+        {src: "assets/images/answer-10.PNG", alt: "Reply hazy, try again"},
+        {src: "assets/images/answer-11.PNG", alt: "Ask again later"},
+        {src: "assets/images/answer-12.PNG", alt: "Better not tell you now"},
+        {src: "assets/images/answer-13.PNG", alt: "Cannot predict now"},
+        {src: "assets/images/answer-14.PNG", alt: "Focus and ask again"},
     ];
 
     images.addEventListener("click", function () {
@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Randome answer
                 const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
-                images.src = randomAnswer;
+                images.src = randomAnswer.src;
+                images.alt = randomAnswer.alt;
             }, 500);
             decreaseTries();
         } else {
