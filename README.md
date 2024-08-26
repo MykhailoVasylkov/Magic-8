@@ -65,7 +65,7 @@ The site was deployed to GitHub Pages. The steps to deploy are as follows:
 3. From the Branch section select the `main` branch and press Save.
 4. Once the `main` branch has been selected, the page will automatically refresh with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here: [Magi 8-Ball](https://mykhailovasylkov.github.io/Magic-8/index.html)
+The live link can be found here: [Magi 8-Ball](https://mykhailovasylkov.github.io/Magic-8/)
 
 ## Credits
 
@@ -73,13 +73,13 @@ The live link can be found here: [Magi 8-Ball](https://mykhailovasylkov.github.i
 - Favicon was created in https://favicon.io/
 - Font Awesome kit was taken from Running Club Project.
 - I used Chat-GPT to figure out how to add a shake effect to 8-Ball images when click on it.
-- I used Chat-GPT to figure out how to change size when hovering over links without changing the position of neighbors.
-- For overwriting the default summary sign, I used materials from these articles:
-1. https://www.w3schools.com/tags/tag_summary.asp
-2. https://www.sitepoint.com/style-html-details-element/
-- To figure out how to make the grid menu on the Gallery page responsive, I used  https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
-- For the dropdown menu, I used a code snippet from the Running Club Project.
+- I used code snippet from Project #1 for hover effect.
+- For figure out how to use DOMContentLoaded event I used:
+https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+- How to use addEventListener() method I used Chat-GPT and:
+https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
 
 ### Media
-- Photo gallery.webp was taken from https://unsplash.com/photos/silhouette-of-people-in-cave-c7xBEFBJhkg
+- Photo of 8-Ball was generated in Microsoft Designer.
 
