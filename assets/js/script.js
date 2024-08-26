@@ -8,59 +8,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Create array with photos that represent random answers
     const answers = [{
-            src: "assets/images/answer-1.PNG",
+            src: "assets/images/answer-1.webp",
             alt: "It is certain"
         },
         {
-            src: "assets/images/answer-2.PNG",
+            src: "assets/images/answer-2.webp",
             alt: "Yes, definitely"
         },
         {
-            src: "assets/images/answer-3.PNG",
+            src: "assets/images/answer-3.webp",
             alt: "Outlook good"
         },
         {
-            src: "assets/images/answer-4.PNG",
+            src: "assets/images/answer-4.webp",
             alt: "Most likely"
         },
         {
-            src: "assets/images/answer-5.PNG",
+            src: "assets/images/answer-5.webp",
             alt: "You may rely on it"
         },
         {
-            src: "assets/images/answer-6.PNG",
+            src: "assets/images/answer-6.webp",
             alt: "My reply is no"
         },
         {
-            src: "assets/images/answer-7.PNG",
+            src: "assets/images/answer-7.webp",
             alt: "Don't count on it"
         },
         {
-            src: "assets/images/answer-8.PNG",
+            src: "assets/images/answer-8.webp",
             alt: "Outlook not so good"
         },
         {
-            src: "assets/images/answer-9.PNG",
+            src: "assets/images/answer-9.webp",
             alt: "Very doubtful"
         },
         {
-            src: "assets/images/answer-10.PNG",
+            src: "assets/images/answer-10.webp",
             alt: "Reply hazy, try again"
         },
         {
-            src: "assets/images/answer-11.PNG",
+            src: "assets/images/answer-11.webp",
             alt: "Ask again later"
         },
         {
-            src: "assets/images/answer-12.PNG",
+            src: "assets/images/answer-12.webp",
             alt: "Better not tell you now"
         },
         {
-            src: "assets/images/answer-13.PNG",
+            src: "assets/images/answer-13.webp",
             alt: "Cannot predict now"
         },
         {
-            src: "assets/images/answer-14.PNG",
+            src: "assets/images/answer-14.webp",
             alt: "Focus and ask again"
         },
     ];
