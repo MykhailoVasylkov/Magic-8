@@ -69,14 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check if the user's email is stored in localStorage to prevent the email from being requested again after page reload.
     const storedEmail = localStorage.getItem("userEmail");
-    
+
     if (storedEmail) {
-        // If email is found, remove the tries area and the email form from the page 
-        triesArea.remove();
-        emailForm.remove();
-        // Set the number of tries to 1000
-        numberOfTries = 1000;
-        userName.innerText = formName + ", ";
+        updateInterface(formName);
     }
 
     //Used https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
@@ -116,29 +111,34 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("userEmail", userEmail);
 
         if (triesArea) {
-            triesArea.remove();
-            emailForm.remove();
-            numberOfTries = 1000;
-            userName.innerText = formName + ", ";
-
+            updateInterface(formName);
         }
     });
-});
 
-//Decrease amount of tries by 1
-function decreaseTries() {
-    // If the #tries element is not found on the page, stop the function
-    const triesElement = document.getElementById("tries");
-    if (!triesElement) {
-        return; // Exit the function without making any changes
+
+    //Decrease amount of tries by 1
+    function decreaseTries() {
+        // If the #tries element is not found on the page, stop the function
+        const triesElement = document.getElementById("tries");
+        if (!triesElement) {
+            return; // Exit the function without making any changes
+        }
+        let defaultTries = parseInt(triesElement.innerText);
+        triesElement.innerText = --defaultTries;
     }
-    let defaultTries = parseInt(triesElement.innerText);
-    triesElement.innerText = --defaultTries;
-}
-// Show the email form
-function showEmailForm() {
-    const emailForm = document.getElementById("emailForm");
-    if (emailForm) {
-        emailForm.classList.remove("hidden");
+    // Show the email form
+    function showEmailForm() {
+        const emailForm = document.getElementById("emailForm");
+        if (emailForm) {
+            emailForm.classList.remove("hidden");
+        }
     }
-}
+    // Updates the user interface by removing the tries area and email form.
+    // setting the number of tries to 1000, and displaying the user's name with a comma.
+    function updateInterface(formName) {
+        triesArea.remove();
+        emailForm.remove();
+        numberOfTries = 1000;
+        userName.innerText = formName + ", ";
+    }
+});
