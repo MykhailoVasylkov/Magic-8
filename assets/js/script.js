@@ -64,8 +64,20 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "Focus and ask again"
         },
     ];
-//Used https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-//Used Chat-GPT
+
+    // Check if the user's email is stored in localStorage to prevent the email from being requested again after page reload.
+    const storedEmail = localStorage.getItem("userEmail");
+    
+    if (storedEmail) {
+        // If email is found, remove the tries area and the email form from the page 
+        triesArea.remove();
+        emailForm.remove();
+        // Set the number of tries to 1000
+        numberOfTries = 1000;
+    }
+
+    //Used https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+    //Used Chat-GPT
     images.addEventListener("click", function () {
         if (numberOfTries > 0) {
             numberOfTries--;
@@ -93,6 +105,12 @@ document.addEventListener("DOMContentLoaded", function () {
     //Remove email form, tries area and increase number of tries after submitting the form
     emailForm.addEventListener("submit", function (event) {
         event.preventDefault();
+
+        const emailInput = document.getElementById("email");
+        const userEmail = emailInput.value;
+
+        // Save email в localStorage
+        localStorage.setItem("userEmail", userEmail);
 
         if (triesArea) {
             triesArea.remove();
