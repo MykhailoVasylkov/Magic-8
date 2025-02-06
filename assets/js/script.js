@@ -68,9 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check if the user's email is stored in localStorage to prevent the email from being requested again after page reload.
     const storedEmail = localStorage.getItem("userEmail");
+    const savedName = localStorage.getItem("userName");
 
-    if (storedEmail) {
-        updateInterface(formName);
+    if (storedEmail && savedName) {
+        updateInterface(savedName);
     }
 
     //Used https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
@@ -110,6 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("userEmail", userEmail);
 
         const formName = document.getElementById("name").value;
+        // Save name в localStorage
+        localStorage.setItem("userName", formName);
 
         if (triesArea) {
             updateInterface(formName);
