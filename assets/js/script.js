@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = document.getElementById("images");
     const emailForm = document.getElementById("emailForm");
     const triesArea = document.getElementById("tries-area");
-    const formName = document.getElementById("name").value;
     const userName = document.getElementById("user-name");
     let numberOfTries = 3;
 
@@ -109,6 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Save email в localStorage
         localStorage.setItem("userEmail", userEmail);
+
+        const formName = document.getElementById("name").value;
 
         if (triesArea) {
             updateInterface(formName);
