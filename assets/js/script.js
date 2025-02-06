@@ -104,8 +104,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Decrease amount of tries by 1
 function decreaseTries() {
-    let defaultTries = parseInt(document.getElementById("tries").innerText);
-    document.getElementById("tries").innerText = --defaultTries;
+    // If the #tries element is not found on the page, stop the function
+    const triesElement = document.getElementById("tries");
+    if (!triesElement) {
+        return; // Exit the function without making any changes
+    }
+    let defaultTries = parseInt(triesElement.innerText);
+    triesElement.innerText = --defaultTries;
 }
 // Show the email form
 function showEmailForm() {
