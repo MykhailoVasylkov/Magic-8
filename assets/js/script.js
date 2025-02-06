@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = document.getElementById("images");
     const emailForm = document.getElementById("emailForm");
     const triesArea = document.getElementById("tries-area");
+    const formName = document.getElementById("name").value;
+    const userName = document.getElementById("user-name");
     let numberOfTries = 3;
 
     //Create array with photos that represent random answers
@@ -74,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         emailForm.remove();
         // Set the number of tries to 1000
         numberOfTries = 1000;
+        userName.innerText = formName + ", ";
     }
 
     //Used https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
@@ -116,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
             triesArea.remove();
             emailForm.remove();
             numberOfTries = 1000;
+            userName.innerText = formName + ", ";
+
         }
     });
 });

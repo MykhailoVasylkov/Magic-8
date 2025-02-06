@@ -35,14 +35,16 @@
     <main>
         <figure>
             <img src="assets/images/default.webp" alt="Magic 8-ball" id="images">
-            <figcaption>Touch the ball to get an answer!</figcaption>
+            <figcaption><span id="user-name"></span>Touch the ball to get an answer!</figcaption>
         </figure>
         <div id="tries-area">
             <p>Number of tries: <span id="tries">3</span></p>
         </div>
         <form id="emailForm" class="hidden" method="post">
-            <label for="email">Give me your soul (email):<br></label>
-            <input type="email" id="email" name="email" required>
+            <label for="email">Give me your soul (email):</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="name">Your name:</label>
+            <input type="name" id="name" name="name" required>
             <button type="submit">Give</button>
         </form>
     </main>
